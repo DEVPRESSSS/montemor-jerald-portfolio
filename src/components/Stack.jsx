@@ -116,7 +116,7 @@ function StackComponent() {
             {/* FrontEnd */}
             <div className="p-2 rounded-2xl">
                 <h6 className="text-gray-500 text-sm">FrontEnd</h6>
-                <div className="grid grid-cols-2 gap-2 border border-gray-100 rounded-lg md:grid-cols-6">
+                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
                     {stacks.frontend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
                     ))}
@@ -126,7 +126,7 @@ function StackComponent() {
             {/* BackEnd */}
             <div className="p-2">
                 <h6 className="text-gray-500 text-sm">BackEnd</h6>
-                <div className="grid grid-cols-2 gap-2 border border-gray-100 rounded-lg md:grid-cols-6">
+                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
                     {stacks.backend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
                     ))}
@@ -136,7 +136,7 @@ function StackComponent() {
             {/* Tools */}
             <div className="p-2">
                 <h6 className="text-gray-500 text-sm">Developer & API testing tools</h6>
-                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border border-gray-100 rounded-lg">
+                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border-b border-gray-100">
                     {stacks.tools.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
@@ -146,7 +146,7 @@ function StackComponent() {
             {/* AI & Architecture */}
             <div className="p-2">
                 <h6 className="text-gray-500 text-sm">AI & ARCHITECTURE</h6>
-                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border border-gray-100 rounded-lg">
+                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border-b border-gray-100">
                     {stacks.ai.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
