@@ -105,7 +105,7 @@ function StackComponent() {
     return (
         <div className="px-2 mt-4 min-h-[80vh]">
             <div className="p-2 text-center h-">
-                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-200 pb-1">
+                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-400 pb-1">
                     TECH STACK
                 </h3>
                 <p className="mt-1 text-gray-500 text-sm">

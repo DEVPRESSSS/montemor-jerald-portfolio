@@ -1,8 +1,107 @@
 export function Projects() {
+    const projects = {
+        
+       academic_project: [
+            {
+                projectId: 1,
+                name:"Point Of Sale",
+                category: "Thesis Project",
+                description: "Built a point of sale system for a small shoes business.",
+                applicationType: "Desktop App",
+                link: "",
+                repository: "",
+                tags: [
+                    "VB.NET",
+                    "WPF",
+                    "SQL Server",
+                    "XAML"
+                ],
+                role: "Leader/Programmer"
+            },
+            {
+                projectId: 2,
+                name:"Kitchen Display System",
+                category: "Thesis Project",
+                description: "Built a kitchen display system using firebase to automate real time ordering.",
+                applicationType: "Desktop App",
+                link: "",
+                repository: "",
+                tags: [
+                    "Python",
+                    "Firebase",
+                    "MySQL",
+                    "Customtkinter"
+                ],
+                 role: "Leader/Programmer"
+            },
+            {
+                projectId: 3,
+                name:"Point Of Sale",
+                category: "Thesis Project",
+                description: "Customize and improved an existing POS website with more secure coding practices.",
+                applicationType: "Web App",
+                link: "",
+                repository: "",
+                tags: [
+                    "ASP",
+                    "Ef Core",
+                    "Bootstrap",
+                    "SQL Server",
+                    "Javascript",
+                    "DrinkPDF",
+                    "IdentityServer"
+                ],
+                 role: "Solo/Programmer"
+            },
+            {
+                projectId: 4,
+                name:"Learning Website",
+                category: "Thesis Project",
+                description: "Developed a simple learning website for students at The Unniversity of Manila.",
+                applicationType: "Web App",
+                link: "",
+                repository: "",
+                tags: [
+                    "ASP",
+                    "Ef Core",
+                    "Bootstrap",
+                    "SQL Server",
+                    "Javascript",
+                    "IdentityServer",
+                    "Quill"
+                ],
+                 role: "Leader/BackEnd developer"
+            },
+
+            {
+                projectId: 5,
+                name:"Hotel Management System",
+                category: "Thesis Project",
+                description: "Developed a HMS to steamline daily operations of a hotel with reservation tracking, payment, and 2d mapping!!!",
+                applicationType: "Web App",
+                link: "",
+                repository: "",
+                tags: [
+                    "Go",
+                    "Gin",
+                    "TailwindCSS",
+                    "Flatpckr",
+                    "Full Calendar",
+                    "Javascript",
+                    "JWT",
+                    "RBAC",
+                ],
+                role: "Solo/Programmer"
+            },
+       ]
+
+        
+    }
+
     return (
         <div className="px-2 mt-4 gap-4 min-h-[80vh]">
             <div className="p-2">
-                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-200 pb-1">
+                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-400 pb-1">
                     ACADEMIC AND PERSONAL PROJECTS
                 </h3>
                     <p className="mt-1 text-gray-500 text-sm">
@@ -12,63 +111,52 @@ export function Projects() {
 
             {/* Projects */}
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 rounded-sm">
-            
-                <div class="w-full border border-gray-200 rounded-sm">
-                        {/* SystemName */}
-                        <div className="flex">
-                            <div class="w-30 flex-none px-2 py-3">
-                                <h5 className="text-sm  font-semibold md:text-lg">POS</h5>
-                            </div>
-                            <div class="flex flex-1 px-2">
-                                {/* ApplicationType */}
-                                <div className="border-b py-3 border-gray-200">
-                                    <h6 className="text-center">Web Application</h6>
+                {
+                    projects.academic_project.map((project) =>(
+                    <div key={project.projectId} class="w-full border border-gray-200 rounded-sm">
+                            <div  className="flex">
+                                <div class="w-30 flex-none px-2 py-3 bg-gray-100">
+                                    <h5 className=" text-xs md:text-sm ">{project.name}</h5>
                                 </div>
-                                {/* link */}
-                                <div className="flex-1 flex items-start justify-end
-                                        border-b text-end border-gray-200 py-2
-                                        ">
-                                    <a href="#" className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white "> 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                    <path strokeLinecap="round"
-                                                        strokeLinejoin="round" 
-                                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                        </svg>
+                                <div class="flex flex-1 px-2">
+                                    {/* ApplicationType */}
+                                    <div >
+                                        <div className="border-b py-3 border-gray-200">
+                                             <h6 className="text-center">{project.applicationType}</h6>
 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+                                        </div>
 
-                <div class="w-full border border-gray-200 rounded-sm">
-                        {/* SystemName */}
-                        <div className="flex">
-                            <div class="w-30 flex-none px-2 py-3">
-                                <h5 className="text-sm  font-semibold md:text-lg">POS</h5>
-                            </div>
-                            <div class="flex flex-1 px-2">
-                                {/* ApplicationType */}
-                                <div className="border-b py-3 border-gray-200">
-                                    <h6 className="text-center">Web Application</h6>
-                                </div>
-                                {/* link */}
-                                <div className="flex-1 flex items-start justify-end
-                                        border-b text-end border-gray-200 py-2
-                                        ">
-                                    <a href="#" className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white "> 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                    <path strokeLinecap="round"
-                                                        strokeLinejoin="round" 
-                                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                        </svg>
+                                            {/* Description & Tags */}
+                                        <div>
+                                            <p className="text-sm text-gray-600">{project.description}</p>
+                                        </div>
+                                    </div>
+                                    {/* link */}
+                                    <div className="flex-1 flex items-start justify-end
+                                            border-b text-end border-gray-200 py-2
+                                            ">
+                                        <a href="#" className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white "> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                                                        <path strokeLinecap="round"
+                                                            strokeLinejoin="round" 
+                                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                            </svg>
 
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                </div>
+                        
+                    </div>
+                    ))
 
+
+                }
+
+
+                
+              
+ 
               
             </div>
             
