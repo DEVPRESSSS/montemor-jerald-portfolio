@@ -14,7 +14,7 @@ export function NavBar() {
     <nav className="bg-white w-full border-b-2 border-gray-100 sticky top-0 py-4 px-6">
       <div className="grid grid-cols-2 md:grid-cols-3 items-center max-w-7xl: md:px-6">
         {/* Left */}
-        <h5 className="text-lg">JM</h5>
+        <h5 className="text-lg">Montemor, Jerald R.</h5>
 
         {/* Center */}
         <ul className="hidden md:flex items-center justify-center gap-8 text-md cursor-pointer">
