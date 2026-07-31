@@ -5,7 +5,7 @@ export function Projects() {
             {
                 projectId: 1,
                 name:"Point Of Sale",
-                category: "Thesis Project",
+                category: "thesis",
                 description: "Built a point of sale system for a small shoes business.",
                 applicationType: "Desktop App",
                 link: "",
@@ -21,7 +21,7 @@ export function Projects() {
             {
                 projectId: 2,
                 name:"Kitchen Display System",
-                category: "Thesis Project",
+                category: "thesis",
                 description: "Built a kitchen display system using firebase to automate real time ordering.",
                 applicationType: "Desktop App",
                 link: "",
@@ -37,7 +37,7 @@ export function Projects() {
             {
                 projectId: 3,
                 name:"Point Of Sale",
-                category: "Thesis Project",
+                category: "thesis",
                 description: "Customize and improved an existing POS website with more secure coding practices.",
                 applicationType: "Web App",
                 link: "",
@@ -56,7 +56,7 @@ export function Projects() {
             {
                 projectId: 4,
                 name:"Learning Website",
-                category: "Thesis Project",
+                category: "thesis",
                 description: "Developed a simple learning website for students at The Unniversity of Manila.",
                 applicationType: "Web App",
                 link: "",
@@ -76,7 +76,7 @@ export function Projects() {
             {
                 projectId: 5,
                 name:"Hotel Management System",
-                category: "Thesis Project",
+                category: "thesis",
                 description: "Developed a HMS to steamline daily operations of a hotel with reservation tracking, payment, and 2d mapping!!!",
                 applicationType: "Web App",
                 link: "",
@@ -115,8 +115,8 @@ export function Projects() {
                     projects.academic_project.map((project) =>(
                     <div key={project.projectId} class="w-full border border-gray-200 rounded-sm">
                             <div  className="flex">
-                                <div class="w-30 flex-none px-2 py-3 bg-gray-100">
-                                    <h5 className=" text-xs md:text-sm ">{project.name}</h5>
+                                <div class="w-30 flex-none px-2 py-3 bg-gray-950 text-white rounded-s-md">
+                                    <h5 className=" text-xs md:text-sm ">{project.name } <span className="text-xs"> -({project.category})</span></h5>
                                 </div>
                                 <div class="flex flex-1 px-2">
                                     {/* ApplicationType */}
@@ -126,9 +126,25 @@ export function Projects() {
 
                                         </div>
 
-                                            {/* Description & Tags */}
-                                        <div>
-                                            <p className="text-sm text-gray-600">{project.description}</p>
+                                        {/* Description & Tags */}
+                                        <div className="mb-2">
+                                            <div className="border-b border-gray-200">
+                                                 <p className="text-sm text-gray-600 ">{project.description}</p>
+
+                                            </div>
+                                            {
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.tags.map((name, index) => (
+                                                    <div
+                                                        key={index}
+                                                        className="flex items-center justify-center h-7  px-3 rounded-2xl"
+                                                    >
+                                                        <p className="text-xs whitespace-nowrap border-b border-gray-200">{name}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            }
+                                          
                                         </div>
                                     </div>
                                     {/* link */}
