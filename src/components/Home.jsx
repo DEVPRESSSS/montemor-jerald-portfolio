@@ -63,17 +63,9 @@ export function Home() {
                                   text-white transition-colors
                                    rounded-full font-medium"
                     >
-                        Projects
+                        View Projects
                     </a>
-                    <a
-                        href="/resume.pdf"
-                        download
-                        className="px-5 py-2 border-2
-                        text-center border-gray-200 hover:border-gray-300 
-                        transition-colors rounded-full font-medium"
-                    >
-                        Download Resume
-                    </a>
+                
                 </div>
 
                 {/* Social links */}
