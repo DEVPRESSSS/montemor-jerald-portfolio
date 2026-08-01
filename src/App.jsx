@@ -1,5 +1,6 @@
 
 import './App.css'
+import { Certifications } from './components/Certfications'
 import { Home } from './components/Home'
 import { NavBar } from './components/Navbar'
 import { Projects } from './components/Projects'
@@ -24,7 +25,7 @@ function App() {
         </section>
 
         <section id='certifications'>
-
+            <Certifications/>
         </section>
 
      </main>
