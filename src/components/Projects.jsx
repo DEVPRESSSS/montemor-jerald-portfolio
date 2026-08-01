@@ -116,15 +116,23 @@ export function Projects() {
                     projects.academic_project.map((project) =>(
                     <div key={project.projectId} class="w-full border border-gray-200 rounded-sm">
                             <div  className="flex">
-                                <div class="w-30 flex-none px-2 py-3 bg-gray-950 text-white rounded-s-md">
+                              <div className="w-30 flex-none flex flex-col h-full px-2 py-3 bg-gray-950 text-white rounded-s-md">
                                     <div>
-                                        <h5 className=" text-xs md:text-sm ">{project.name } <span className="text-xs"> -({project.category})</span></h5>
-
+                                        <h5 className="text-xs md:text-sm">
+                                            {project.name} <span className="text-xs">-({project.category})</span>
+                                        </h5>
                                     </div>
-                                    {/* Repository Page */}
-                                    <div className="h-full flex items-center justify-center">
+
+                                    {/* Repository Page*/}
+                                    <div className="mt-auto flex items-center justify-center pt-3">
                                         <a href="#" className="bg-white rounded-full hand-pointer">
-                                            <img src={Github} className="object-contain" alt="Github Logo" />
+                                            <img
+                                                src={Github}
+                                                className="object-contain"
+                                                loading="lazy"
+                                                decoding="async"
+                                                alt="Github Logo"
+                                            />
                                         </a>
                                     </div>
                                 </div>
