@@ -10,7 +10,7 @@ function App() {
   return (
    <>
      <NavBar/>
-     <main className= "max-w-7xl mx-auto px-2 md:px-6" >
+     <main className= "max-w-7xl mx-auto px-6" >
         <section id='home'>
            <Home/>
         </section>
