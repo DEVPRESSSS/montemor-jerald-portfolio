@@ -111,7 +111,7 @@ export function Projects() {
             </div>
 
             {/* Projects */}
-            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-2 rounded-sm">
+            <div className="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 rounded-lg">
                 {
                     projects.academic_project.map((project) =>(
                     <div key={project.projectId} class="w-full border border-gray-200 rounded-sm">

@@ -103,7 +103,7 @@ const TechItemCompact = React.memo(function TechItemCompact({ tech }) {
 
 function StackComponent() {
     return (
-        <div className="px-2 mt-4 min-h-[80vh]">
+        <div className="px-2  mt-4 min-h-[80vh]">
             <div className="p-2 text-center h-">
                 <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-400 pb-1">
                     TECH STACK
@@ -114,8 +114,8 @@ function StackComponent() {
             </div>
 
             {/* FrontEnd */}
-            <div className="p-2 rounded-2xl">
-                <h6 className="text-gray-500 text-sm">FRONTEND</h6>
+            <div className="p-2 rounded-lg border border-gray-100 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100">FRONTEND</h6>
                 <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
                     {stacks.frontend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
@@ -124,8 +124,8 @@ function StackComponent() {
             </div>
 
             {/* BackEnd */}
-            <div className="p-2">
-                <h6 className="text-gray-500 text-sm">BACKEND</h6>
+            <div className="p-2 rounded-lg border border-gray-100 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100">BACKEND</h6>
                 <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
                     {stacks.backend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
@@ -134,9 +134,9 @@ function StackComponent() {
             </div>
 
             {/* Tools */}
-            <div className="p-2">
-                <h6 className="text-gray-500 text-sm">IDE & API TESTING TOOLS</h6>
-                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border-b border-gray-100">
+            <div className="p-2 rounded-lg border border-gray-100 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100">IDE & API TESTING TOOLS</h6>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b border-gray-100">
                     {stacks.tools.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
@@ -144,9 +144,9 @@ function StackComponent() {
             </div>
 
             {/* AI & Architecture */}
-            <div className="p-2">
-                <h6 className="text-gray-500 text-sm">AI & ARCHITECTURE</h6>
-                <div className="grid grid-cols-4 md:grid-cols-6 gap-2 border-b border-gray-100">
+            <div className="p-2 rounded-lg border border-gray-100 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100">AI & ARCHITECTURE</h6>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b border-gray-100">
                     {stacks.ai.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
