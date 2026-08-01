@@ -58,7 +58,7 @@ export function Projects() {
                 projectId: 4,
                 name:"Learning Website",
                 category: "thesis",
-                description: "Developed a simple learning website for students at The Unniversity of Manila.",
+                description: "Developed a simple learning website for students at The University of Manila.",
                 applicationType: "Web App",
                 link: "",
                 repository: "",
