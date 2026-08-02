@@ -4,10 +4,10 @@ export function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { href: "#home", label: "Home" },
-    { href: "#projects", label: "Projects" },
-    { href: "#techstack", label: "Stack" },
-    { href: "#certifications", label: "Certifications" },
+    { path: "/", label: "Home" },
+    { path: "/projects", label: "Projects" },
+    { path: "/techstacks", label: "Stack" },
+    { path: "/certifications", label: "Certifications" },
   ];
 
   return (
@@ -18,8 +18,8 @@ export function NavBar() {
         {/* Center */}
         <ul className="hidden md:flex md:items-center md:justify-center gap-8 text-md cursor-pointer">
           {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+            <li key={link.path}>
+              <a href={link.path}>{link.label}</a>
             </li>
           ))}
         </ul>

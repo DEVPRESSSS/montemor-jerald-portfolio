@@ -5,31 +5,23 @@ import { Home } from './components/Home'
 import { NavBar } from './components/Navbar'
 import { Projects } from './components/Projects'
 import { Stack } from './components/Stack'
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
 
   return (
    <>
-     <NavBar/>
-     <main className= "max-w-7xl mx-auto px-6" >
-        <section id='home'>
-           <Home/>
-        </section>
-
-        <section id='projects'>
-           <Projects/>
-        </section>
-
-        <section id='techstack'>
-            <Stack/>
-        </section>
-
-        <section id='certifications'>
-            <Certifications/>
-        </section>
-
-     </main>
-  
+     <BrowserRouter> 
+         <NavBar/>  
+         <main className= "max-w-7xl mx-auto px-6" >
+            <Routes>
+                  <Route path= "/" element ={<Home/>}/>
+                  <Route path= "/projects" element ={<Projects/>}/>
+                  <Route path= "/techstacks" element ={<Stack/>}/>
+                  <Route path= "/certifications" element ={<Certifications/>}/>
+            </Routes>
+         </main>    
+     </BrowserRouter>
    </>
    
 
