@@ -64,7 +64,7 @@ export function NavBar({darkmode,toggleTheme}) {
 
       {/* Hamburger — mobile only */}
       <button
-        className="md:hidden p-1.5 text-gray-600 hover:text-gray-900 transition-colors duration-150"
+        className="md:hidden p-1.5 text-gray-600 hover:text-gray-900 transition-colors duration-150 dark:text-gray-200"
         aria-label={mobileOpen ? "Close menu" : "Open menu"}
         aria-expanded={mobileOpen}
         onClick={() => setMobileOpen((v) => !v)}
