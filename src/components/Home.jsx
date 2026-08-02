@@ -6,6 +6,7 @@ import Github from "../assets/github.png"
 import { Projects } from "./Projects"
 import { Stack } from "./Stack"
 import { Certifications } from "./Certfications"
+import { Link } from "react-router-dom"
 
 export function Home() {
 
@@ -60,15 +61,15 @@ export function Home() {
 
                     {/* CTA buttons */}
                     <div className="flex flex-row justify-start gap-3 mt-6">
-                        <a 
-                            href="#projects"
+                        <Link
+                             to = "/projects"
                             className="px-5 py-2 text-center
                                     bg-black
                                     text-white transition-colors
                                     rounded-full font-medium"
                         >
                             View Projects
-                        </a>
+                        </Link>
                     
                     </div>
 
@@ -91,7 +92,7 @@ export function Home() {
                 </div>
 
             </section>
-            
+
             <section>
                 <Projects/>           
             </section>
