@@ -47,8 +47,8 @@ function App() {
    <>
      <BrowserRouter> 
          <NavBar darkmode = {darkMode} toggleTheme = {toggleTheme}/>  
-         <main className= "dark:bg-black max-w-7xl mx-auto px-6" onClick={handleClick} >
-            <Routes>
+          <main className="bg-white dark:bg-black max-w-7xl mx-auto px-6 min-h-screen" onClick={handleClick}>
+              <Routes>
                   <Route path= "/" element ={<Home/>}/>
                   <Route path= "/projects" element ={<Projects/>}/>
                   <Route path= "/techstacks" element ={<Stack/>}/>
