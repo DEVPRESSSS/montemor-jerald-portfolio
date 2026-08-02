@@ -12,12 +12,11 @@ export function NavBar() {
 
   return (
     <nav className="bg-white w-full border-b-2 border-gray-100 sticky top-0 py-4 px-6">
-      <div className="grid grid-cols-2 md:grid-cols-3 items-center max-w-7xl">
-        {/* Left */}
+      <div className="grid grid-cols-2 md:grid-cols-3 items-center max-w-7xl mx-auto w-full">       
         <h5 className="text-lg">JM</h5>
 
         {/* Center */}
-        <ul className="hidden md:flex items-center justify-center gap-8 text-md cursor-pointer">
+        <ul className="hidden md:flex md:items-center md:justify-center gap-8 text-md cursor-pointer">
           {links.map((link) => (
             <li key={link.href}>
               <a href={link.href}>{link.label}</a>
