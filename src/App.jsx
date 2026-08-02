@@ -7,6 +7,7 @@ import { Projects } from './components/Projects'
 import { Stack } from './components/Stack'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import confetti from "canvas-confetti";
+import { useEffect, useState } from 'react'
 
 
 function App() {
@@ -22,11 +23,31 @@ function App() {
     });
   };
 
+  const[darkMode, setDarkMode] = useState(()=>{
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(()=>{
+    if(darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme","dark");
+    }else{
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme","light"); 
+    }
+
+  },[darkMode]);
+  
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev);
+  };
+
+
   return (
    <>
      <BrowserRouter> 
-         <NavBar/>  
-         <main className= "max-w-7xl mx-auto px-6" onClick={handleClick} >
+         <NavBar darkmode = {darkMode} toggleTheme = {toggleTheme}/>  
+         <main className= "dark:bg-black max-w-7xl mx-auto px-6" onClick={handleClick} >
             <Routes>
                   <Route path= "/" element ={<Home/>}/>
                   <Route path= "/projects" element ={<Projects/>}/>

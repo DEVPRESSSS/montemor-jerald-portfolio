@@ -39,7 +39,7 @@ export function Home() {
     return (
         <>
             <section className="grid grid-cols-1 md:grid-cols-2 px-2 mt-4 gap-4 items-center min-h-[80vh]">
-                <div className="flex justify-center items-center py-4 px-2">
+                <div className="flex justify-center items-center py-4 px-2 dark:bg-black">
                     <img
                         src={Profile}
                         className="rounded-b-full h-64 w-64 md:h-90 md:w-90 object-contain"
@@ -47,13 +47,13 @@ export function Home() {
                     />
                 </div>
 
-                <div className="py-4 px-2">
-                    <h4 className="text-3xl  mb-1">Montemor, Jerald R.</h4>
-                    <p className="text-lg text-gray-500 mb-4">
+                <div className="py-4 px-2 dark:bg-black dark:text-white">
+                    <h4 className="text-3xl   mb-1">Montemor, Jerald R.</h4>
+                    <p className="text-lg text-gray-500 mb-4 dark:text-white">
                         .NET Developer | Quality Assurance
                     </p>
 
-                    <p className="text-gray-600 max-w-prose">
+                    <p className="text-gray-600 max-w-prose  dark:text-white">
                         Fresh out of the gate as a developer, focused on writing clean code and building applications 
                         people actually enjoy using.
                     </p>
@@ -65,7 +65,11 @@ export function Home() {
                              to = "/projects"
                             className="px-5 py-2 text-center
                                     bg-black
-                                    text-white transition-colors
+                                    
+                                    dark:bg-white
+                                     dark:text-black
+                                    text-white
+                                     transition-colors
                                     rounded-full font-medium"
                         >
                             View Projects

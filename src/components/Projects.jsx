@@ -102,23 +102,26 @@ export function Projects() {
     return (
         <div className="px-2 mt-4 gap-4 min-h-[80vh]">
             <div className="p-2">
-                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-400 pb-1">
+                <h3 className="text-2xl font-semibold inline-block 
+                    dark:text-white
+                     dark:border-white
+                    border-b-4 border-gray-400 pb-1">
                     ACADEMIC AND PERSONAL PROJECTS
                 </h3>
-                    <p className="mt-1 text-gray-500 text-sm">
+                    <p className="mt-1 text-gray-500 text-sm  dark:text-white">
                         A mix of coursework, self-initiated builds, and things I made just to learn something new.
                     </p>
             </div>
 
             {/* Projects */}
-            <div className="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 rounded-lg">
+            <div className="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 rounded-lg   dark:text-gray-200 ">
                 {
                     projects.academic_project.map((project) =>(
-                    <div key={project.projectId} class="w-full border border-gray-200 rounded-sm">
+                    <div key={project.projectId} class="w-full border border-gray-200  dark:border-gray-700 rounded-sm">
                             <div  className="flex">
                               <div className="w-30 flex-none flex flex-col h-full px-2 py-3 bg-gray-950 text-white rounded-s-md">
                                     <div>
-                                        <h5 className="text-xs md:text-sm">
+                                        <h5 className="text-xs md:text-sm  dark:text-white">
                                             {project.name} <span className="text-xs">-({project.category})</span>
                                         </h5>
                                     </div>
@@ -146,9 +149,8 @@ export function Projects() {
 
                                         {/* Description & Tags */}
                                         <div className="mb-2">
-                                            <div className="border-b border-gray-200">
-                                                 <p className="text-sm text-gray-600 ">{project.description}</p>
-
+                                            <div className="border-b border-gray-200 dark:border-gray-700">
+                                                 <p className="text-sm text-gray-600  dark:text-gray-200 ">{project.description}</p>
                                             </div>
                                             {
                                             <div className="flex flex-wrap gap-2">
@@ -157,7 +159,9 @@ export function Projects() {
                                                         key={index}
                                                         className="flex items-center justify-center h-7  px-3 rounded-2xl"
                                                     >
-                                                        <p className="text-xs whitespace-nowrap border-b border-gray-200">{name}</p>
+                                                        <p className="text-xs whitespace-nowrap 
+                                                            border-b border-gray-200 
+                                                             dark:text-gray-200 ">{name}</p>
                                                     </div>
                                                 ))}
                                             </div>
@@ -167,7 +171,7 @@ export function Projects() {
                                     </div>
                                     {/* link */}
                                     <div className="flex-1 flex items-start justify-end
-                                            border-b text-end border-gray-200 py-2
+                                            border-b text-end border-gray-200 dark:border-none py-2
                                             ">
                                         <a href="#" className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white "> 
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">

@@ -81,7 +81,7 @@ const TechItem = React.memo(function TechItem({ tech }) {
                 loading="lazy"
                 decoding="async"
             />
-            <p className="text-xs md:text-sm text-gray-400">{tech.name}</p>
+            <p className="text-xs md:text-sm text-gray-400  dark:text-gray-200 ">{tech.name}</p>
         </div>
     );
 });
@@ -96,7 +96,7 @@ const TechItemCompact = React.memo(function TechItemCompact({ tech }) {
                 loading="lazy"
                 decoding="async"
             />
-            <p className="text-xs md:text-sm text-gray-400">{tech.name}</p>
+            <p className="text-xs md:text-sm text-gray-400  dark:text-gray-200 ">{tech.name}</p>
         </div>
     );
 });
@@ -105,18 +105,21 @@ function StackComponent() {
     return (
         <div className="px-2  mt-4 min-h-[80vh]">
             <div className="p-2 text-center h-">
-                <h3 className="text-2xl font-semibold inline-block border-b-4 border-gray-400 pb-1">
+                <h3 className="text-2xl font-semibold inline-block border-b-4
+                     dark:text-white
+                      dark:border-white
+                     border-gray-400 pb-1">
                     TECH STACK
                 </h3>
-                <p className="mt-1 text-gray-500 text-sm">
+                <p className="mt-1 text-gray-500 text-sm  dark:text-gray-200 ">
                     Technologies and tools I use to build desktop and web applications.
                 </p>
             </div>
 
             {/* FrontEnd */}
-            <div className="p-2 rounded-lg border border-gray-100 mb-1">
-                <h6 className="text-gray-500 text-sm border-b border-gray-100">FRONTEND</h6>
-                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
+            <div className="p-2 rounded-lg border border-gray-100 dark:border-gray-700 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100  dark:border-gray-700 dark:text-gray-200 ">FRONTEND</h6>
+                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  dark:border-gray-700 md:grid-cols-6">
                     {stacks.frontend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
                     ))}
@@ -124,9 +127,9 @@ function StackComponent() {
             </div>
 
             {/* BackEnd */}
-            <div className="p-2 rounded-lg border border-gray-100 mb-1">
-                <h6 className="text-gray-500 text-sm border-b border-gray-100">BACKEND</h6>
-                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  md:grid-cols-6">
+            <div className="p-2 rounded-lg border border-gray-100  dark:border-gray-700 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100  dark:border-gray-700 dark:text-gray-200 ">BACKEND</h6>
+                <div className="grid grid-cols-2 gap-2 border-b border-gray-100  dark:border-gray-700  md:grid-cols-6">
                     {stacks.backend.map((tech) => (
                         <TechItem key={tech.name} tech={tech} />
                     ))}
@@ -134,9 +137,9 @@ function StackComponent() {
             </div>
 
             {/* Tools */}
-            <div className="p-2 rounded-lg border border-gray-100 mb-1">
-                <h6 className="text-gray-500 text-sm border-b border-gray-100">IDE & API TESTING TOOLS</h6>
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b border-gray-100">
+            <div className="p-2 rounded-lg border border-gray-100  dark:border-gray-700 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100  dark:border-gray-700 dark:text-gray-200 ">IDE & API TESTING TOOLS</h6>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b  dark:border-gray-700 border-gray-100">
                     {stacks.tools.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
@@ -144,9 +147,9 @@ function StackComponent() {
             </div>
 
             {/* AI & Architecture */}
-            <div className="p-2 rounded-lg border border-gray-100 mb-1">
-                <h6 className="text-gray-500 text-sm border-b border-gray-100">AI & ARCHITECTURE</h6>
-                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b border-gray-100">
+            <div className="p-2 rounded-lg border border-gray-100  dark:border-gray-700 mb-1">
+                <h6 className="text-gray-500 text-sm border-b border-gray-100  dark:border-gray-700 dark:text-gray-200 ">AI & ARCHITECTURE</h6>
+                <div className="grid grid-cols-3 md:grid-cols-6 gap-2 border-b border-gray-100  dark:border-gray-700">
                     {stacks.ai.map((tech) => (
                         <TechItemCompact key={tech.name} tech={tech} />
                     ))}
