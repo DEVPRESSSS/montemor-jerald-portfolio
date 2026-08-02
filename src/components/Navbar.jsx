@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,9 +19,8 @@ export function NavBar() {
         {/* Center */}
         <ul className="hidden md:flex md:items-center md:justify-center gap-8 text-md cursor-pointer">
           {links.map((link) => (
-            <li key={link.path}>
-              <a href={link.path}>{link.label}</a>
-            </li>
+            <Link to = {link.path} key={link.path}>{link.label}</Link>
+            
           ))}
         </ul>
 
