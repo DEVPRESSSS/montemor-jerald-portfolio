@@ -95,6 +95,25 @@ export function Projects() {
                 ],
                 role: "Solo/Programmer"
             },
+            
+            {
+                projectId: 6,
+                name:"Hotel Management System",
+                category: "Personal Project",
+                description: "Consumed an api from my ASP.NET core web api backend.",
+                applicationType: "Web App",
+                link: "",
+                repository: "https://github.com/DEVPRESSSS/hotel-management-system-go-lang-thesis",
+                tags: [
+                    "Backend - ASP.NET CORE WEB API",
+                    "Frontend - React",
+                    "TailwindCSS",
+                    "Ef Core",
+                    "SQL server",
+                    "RBAC",
+                ],
+                role: "Fullstack"
+            },
        ]
 
         
