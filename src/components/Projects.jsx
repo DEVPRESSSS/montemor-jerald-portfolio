@@ -10,12 +10,13 @@ export function Projects() {
                 description: "Built a point of sale system for a small shoes business.",
                 applicationType: "Desktop App",
                 link: "",
-                repository: "",
+                repository: "https://github.com/DEVPRESSSS/VB.NET_THESIS_THIRYEAR_WPF",
                 tags: [
                     "VB.NET",
                     "WPF",
                     "SQL Server",
-                    "XAML"
+                    "XAML",
+                    "Windows Application"
                 ],
                 role: "Leader/Programmer"
             },
@@ -26,7 +27,7 @@ export function Projects() {
                 description: "Built a kitchen display system using firebase to automate real time ordering.",
                 applicationType: "Desktop App",
                 link: "",
-                repository: "",
+                repository: "https://github.com/DEVPRESSSS/KDS-THESIS-PROJECT-2ND-YEAR",
                 tags: [
                     "Python",
                     "Firebase",
@@ -41,8 +42,8 @@ export function Projects() {
                 category: "thesis",
                 description: "Customize and improved an existing POS website with more secure coding practices.",
                 applicationType: "Web App",
-                link: "",
-                repository: "",
+                link: "http://devpresstech.runasp.net/Admin",
+                repository: "https://github.com/DEVPRESSSS/POS-SE101-PROJECT",
                 tags: [
                     "ASP",
                     "Ef Core",
@@ -60,7 +61,7 @@ export function Projects() {
                 category: "thesis",
                 description: "Developed a simple learning website for students at The University of Manila.",
                 applicationType: "Web App",
-                link: "",
+                link: "http://lms-v7.runasp.net/",
                 repository: "",
                 tags: [
                     "ASP",
@@ -81,7 +82,7 @@ export function Projects() {
                 description: "Developed a HMS to steamline daily operations of a hotel with reservation tracking, payment, and 2d mapping!!!",
                 applicationType: "Web App",
                 link: "",
-                repository: "",
+                repository: "https://github.com/DEVPRESSSS/hotel-management-system-go-lang-thesis",
                 tags: [
                     "Go",
                     "Gin",
@@ -128,7 +129,7 @@ export function Projects() {
 
                                     {/* Repository Page*/}
                                     <div className="mt-auto flex items-center justify-center pt-3">
-                                        <a href="#" className="bg-white rounded-full hand-pointer">
+                                        <a href= {project.repository} className="bg-white rounded-full hand-pointer">
                                             <img
                                                 src={Github}
                                                 className="object-contain"
@@ -170,17 +171,30 @@ export function Projects() {
                                         </div>
                                     </div>
                                     {/* link */}
-                                    <div className="flex-1 flex items-start justify-end
-                                            border-b text-end border-gray-200 dark:border-none py-2
-                                            ">
-                                        <a href="#" className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white "> 
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-                                                        <path strokeLinecap="round"
-                                                            strokeLinejoin="round" 
-                                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                                            </svg>
-
+                               <div className="flex-1 flex items-start justify-end border-b text-end border-gray-200 dark:border-none py-2">
+                                    {project.link && project.link.trim() !== "" ? (
+                                        
+                                        <a href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white"
+                                        >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                        </svg>
                                         </a>
+                                    ) : (
+                                        <button
+                                        onClick={() => alert('No link available!!')}
+                                        className="rounded-full py-2 px-2 cursor-pointer hover:bg-black hover:text-white"
+                                        >
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                                            <path strokeLinecap="round" strokeLinejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                        </svg>
+                                        </button>
+                                    )}
                                     </div>
                                 </div>
                             </div>
