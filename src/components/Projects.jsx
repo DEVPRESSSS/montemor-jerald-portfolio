@@ -98,7 +98,7 @@ export function Projects() {
             
             {
                 projectId: 6,
-                name:"Hotel Management System",
+                name:"Hotel Management System (In progress)",
                 category: "Personal Project",
                 description: "Consumed an api from my ASP.NET core web api backend.",
                 applicationType: "Web App",
